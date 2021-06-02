@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+<Resource
+name="jdbc/OracleDB"
+auth="Container"
+type="javax.sql.DataSource"
+username="EHSZM"
+password="1234"
+driverclassName="oracle.jdbc.driver.oracleDriver"
+factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+url="jdbc:oracle:thin:@localhost:1521:xe"
+maxIdle="100"
+maxTotal="100"
+/>
+</Context>
+<!-- 
+ name :: 여러 DB에 연결할경우 context를 찾기 위한 이름
+ factory :: API를 불러오기 위한 주소 (Connection pool을 사용하기 위해 필요함)
+ connection pool :: Connection을 사용하기위해 미리 만들어 놓은 것
+ max Active :: Connection 을 최대로 사용할수있는갯수
+ maxIdle :: Connection을 사용하지 않을때 기본적으로 유지되는 갯수
+ -->
